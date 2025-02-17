@@ -1,0 +1,12 @@
+local v0=game:GetService("Players");local function v1() local v4=0 -0 ;while true do if (v4==0) then for v22,v23 in pairs(game.Workspace:GetDescendants()) do if (v23:IsA("BasePart") and v23.Name:lower():find("chest")) then return v23;end end return nil;end end end local function v2(v5) local v6=490 -(59 + 431) ;local v7;local v8;local v9;while true do if (v6==(728 -(433 + 294))) then v9=Instance.new("TextLabel");v9.Size=UDim2.new(1846.3 -(1228 + 618) ,0 -0 ,0.1 -0 ,0);v9.Position=UDim2.new(952.35 -(802 + 150) ,0,0.1 -0 ,0 -0 );v6=2 + 0 ;end if (v6==(997 -(915 + 82))) then v7=v5:WaitForChild("PlayerGui");v8=Instance.new("ScreenGui");v8.Parent=v7;v6=2 -1 ;end if (v6==(2 + 1)) then v9.Font=Enum.Font.SourceSansBold;v9.TextScaled=true;v9.Parent=v8;break;end if (v6==(2 -0)) then v9.BackgroundColor3=Color3.new(1187 -(1069 + 118) ,0,0 -0 );v9.TextColor3=Color3.new(1 -0 ,1,1);v9.Text="Kiettrumhtml.site";v6=1 + 2 ;end end end local function v3() local v10=0 -0 ;local v11;while true do if (v10==(1 + 0)) then for v24,v25 in pairs(v0:GetPlayers()) do if (v25.Character and v25.Character:FindFirstChild("HumanoidRootPart")) then local v26=791 -(368 + 423) ;local v27;while true do if (v26==(3 -2)) then v27.CFrame=v11.CFrame + Vector3.new(18 -(10 + 8) ,11 -8 ,442 -(416 + 26) ) ;break;end if (v26==(0 -0)) then v2(v25);v27=v25.Character.HumanoidRootPart;v26=1 + 0 ;end end end end break;end if (v10==0) then v11=v1();if  not v11 then return;end v10=1 -0 ;end end end while task.wait(438 -(145 + 293) ) do v3();end
+-- â ï¸ WARNING: integrity protected!
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+
+]]--
