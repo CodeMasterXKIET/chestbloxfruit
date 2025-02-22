@@ -1,0 +1,145 @@
+local player = game:GetService("Players").LocalPlayer
+local playerGui = player:FindFirstChildOfClass("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+local button1 = Instance.new("ImageButton")
+button1.Parent = screenGui
+button1.Size = UDim2.new(0, 50, 0, 50)
+button1.Position = UDim2.new(0, 10, 0, 10)
+button1.Image = "rbxthumb://type=Asset&id=90555031068147&w=420&h=420"
+button1.BackgroundTransparency = 0.5
+
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(0, 10)
+uiCorner.Parent = button1
+
+local frame = Instance.new("Frame")
+frame.Parent = screenGui
+frame.Size = UDim2.new(0, 500, 0, 290)
+frame.Position = UDim2.new(0, 100, 0, 0)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.Visible = false
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(0, 500, 0, 30)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.Text = "Kiettrumhtml [Premium] - Blox Fruit Mobile"
+textLabel.Font = Enum.Font.PatrickHand
+textLabel.TextSize = 24
+textLabel.Parent = frame
+textLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+local scrollingFrame = Instance.new("ScrollingFrame")
+scrollingFrame.Parent = frame
+scrollingFrame.Size = UDim2.new(0, 500, 0, 259)
+scrollingFrame.Position = UDim2.new(0, 0, 0, 31)
+scrollingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 15000)
+scrollingFrame.ScrollBarThickness = 10
+
+local buttonNames = {
+    "Auto Chest - [ OFF ]",
+    "Auto Farm Level - [ OFF ]",
+    "Auto Farm Mastery - [ OFF ]",
+    "Auto Farm Bone - [ OFF ]",
+    "Auto Farm Dragon Scales - [ OFF ]",
+    "Auto Up v2 - [ OFF ]",
+    "Auto Up v3 - [ OFF ]",
+    "Auto Up v4 - [ OFF ]",
+    "Auto Kill User - [ OFF ]",
+    "Auto Find Gear - [ OFF ]",
+    "Auto Find Fruit - [ OFF ]",
+    "Auto Random Fruit - [ OFF ]",
+    "Auto Storage Fruit - [ OFF ]",
+    "Auto Get All Item - [ OFF ]",
+    "Auto CDK - [ OFF ]",
+    "Auto Yama - [ OFF ]",
+    "Auto Tushita - [ OFF ]",
+    "Auto Shishui - [ OFF ]",
+    "Auto Wando - [ OFF ]",
+    "Auto Saddi - [ OFF ]",
+    "Auto TTK - [ OFF ],
+"Auto Cursed Dual Katana - [ OFF ],"
+"Auto Dark Dagger - [ OFF ],"
+"Auto Tushita - [ OFF ],"
+"Auto Yama - [ OFF ],"
+"Auto Hallow Scythe - [ OFF ],"
+"Auto Soul Guitar - [ OFF ],"
+"Auto Valkyrie Helm - [ OFF ],"
+"Auto Dark Coat - [ OFF ],"
+"Auto Ghoul Mask - [ OFF ],"
+"Auto Hunter Cape - [ OFF ],"
+"Auto Musketeer Hat - [ OFF ],"
+"Auto Warrior Helmet - [ OFF ],"
+"Auto Dragon Talon - [ OFF ],"
+"Auto Sharkman Karate - [ OFF ],"
+"Auto Superhuman - [ OFF ],"
+"Auto Death Step - [ OFF ],"
+"Auto Electric Claw - [ OFF ],"
+"Auto Spikey Trident - [ OFF ],"
+"Auto Pole v2 - [ OFF ],"
+"Auto Twin Hooks - [ OFF ],"
+"Auto Kabucha - [ OFF ],"
+"Auto Serpent Bow - [ OFF ],"
+"Auto Midnight Blade - [ OFF ],"
+"Auto Gravity Cane - [ OFF ],"
+"Auto Saber v2 - [ OFF ],"
+"Auto Shisui - [ OFF ],"
+"Auto Saddi - [ OFF ],"
+"Auto Wando - [ OFF ],"
+"Auto True Triple Katana - [ OFF ],"
+"Auto Rengoku - [ OFF ],"
+"Auto Gravity Blade - [ OFF ],"
+"Auto Jitte - [ OFF ],"
+"Auto Trident - [ OFF ],"
+"Auto Bisento v2 - [ OFF ],"
+"Auto Pipe - [ OFF ],"
+"Auto Soul Cane - [ OFF ],"
+"Auto Iron Mace - [ OFF ],"
+"Auto Triple Katana - [ OFF ],"
+"Auto Cutlass - [ OFF ],"
+"Auto Katana - [ OFF ],"
+"Auto Longsword - [ OFF ],"
+"Auto Slayer Dark Coat - [ OFF ],"
+"Auto Marine Captain's Cape - [ OFF ],"
+"Auto Black Spikey Coat - [ OFF ],"
+"Auto Red Spikey Coat - [ OFF ],"
+"Auto Bear Ears - [ OFF ],"
+"Auto Pale Scarf - [ OFF ],"
+"Auto Sun Hat - [ OFF ],"
+"Auto Swan Glasses - [ OFF ],"
+"Auto Golden Sunhat - [ OFF ],"
+"Auto Holiday Cloak - [ OFF ],"
+"Auto Santa Hat - [ OFF ],"
+ - [ OFF ]",
+  "Auto Raid Boss - [ OFF ],"
+"Auto Sea King - [ OFF ],"
+"Auto Dough King - [ OFF ],"
+"Auto Ice Admiral - [ OFF ],"
+"Auto Flamingo Boss - [ OFF ],"
+"Auto Swan Boss - [ OFF ],"
+"Auto Darkbeard - [ OFF ],"
+"Auto Kilo Boss - [ OFF ],"
+"Auto Gorilla King - [ OFF ],"
+"Auto Big Mom - [ OFF ],"
+}
+
+for i, name in ipairs(buttonNames) do
+    local button = Instance.new("TextButton")
+    button.Parent = scrollingFrame
+    button.Size = UDim2.new(0, 490, 0, 50)
+    button.Position = UDim2.new(0, 0, 0, (i - 1) * 51)
+    button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    button.TextColor3 = Color3.fromRGB(50, 50, 50)
+    button.Text = name .. " - [ OFF ]"
+    button.Font = Enum.Font.SourceSansBold
+    button.TextSize = 30
+end
+
+button1.MouseButton1Click:Connect(function()
+    frame.Visible = not frame.Visible
+end)
